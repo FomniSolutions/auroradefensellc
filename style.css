@@ -1,0 +1,258 @@
+* {
+  font-family: oswald, sans-serif;
+  margin: 0;
+  line-height: 1.8;
+  box-sizing: border-box;
+}
+.landing_page {
+  min-height: 60dvh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(1, 1, 49, 0.685),
+      rgba(1, 1, 49, 0.774)
+    ),
+    url(images/earthbanner.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  font-size: 2rem;
+  color: rgba(245, 245, 245, 0.795);
+}
+.landing_page img {
+  margin: 40px auto;
+
+}
+.landing_page p {
+  font-size: 1.6rem;
+}
+@media (max-width: 550px) {
+  .logo {
+    width: 60dvh;
+    max-width: 40dvh;
+  }
+}
+.logo {
+  width: 60dvh;
+  max-width: 40dvh;
+  margin: 20px auto;
+}
+.landing {
+  display: block;
+  text-align: center;
+  font-size: 1.6rem;
+  color: rgba(245, 245, 245, 0.795);
+}
+.cta-btn {
+  padding: 2dvh;
+
+}
+.wrapper {
+  background-color: #f8f8ff;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.quote,
+.careers,
+.about,
+.contact {
+  max-width: 99dvh;
+  margin: 10px  auto;
+  background-color: rgba(1, 1, 49, 0.1);
+  border-radius: 10px;
+  padding: 5%;
+}
+h2 {
+  padding: 12px;
+  font-size: 2rem;
+  color: rgba(1, 1, 49, 1);
+}
+/*  service section row   */
+.service-columns {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 31%;
+  justify-content: center;
+  
+}
+.service-col {
+  max-width: 43dvh;
+  margin: 5px;
+  padding: 5px;
+}
+.service-col img {
+  opacity: 0.8;
+  width: 100%;
+  max-height: 200px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.service-col h3 {
+  background-color: rgba(1, 1, 49, 0.1);
+  font-size: 1.6rem;
+  color: rgba(1, 1, 49, 1);
+}
+.service-col p {
+  background-color: rgba(1, 1, 49, 0.1);
+  padding: 15px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+@media (max-width: 550px) {
+  .service-columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.quote p,
+.careers p {
+  padding-bottom: 15px;
+}
+/*    Buttons   */
+button {
+  color: whitesmoke;
+  background: dodgerblue;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 1.2rem;
+}
+button:hover {
+  background-color: whitesmoke;
+  color: rgba(1, 1, 49, 1);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+/*   Modal  */
+.modal,
+.modalTwo {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.7);
+}
+.closebtn,
+.closebtnTwo {
+  margin-top: -20px;
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+}
+/* quotes modal content */
+.modalQuotes {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgba(245, 245, 245, 0.9);
+  box-shadow: 0px 0px 25px rgb(212, 211, 211);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  color: rgba(1, 1, 49, 1);
+  font-weight: 600;
+  animation-name: modalOpen;
+  animation-duration: 1s;
+}
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.serviceType {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.serviceRequested {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.information input {
+  width: 100%;
+}
+#message {
+  margin-top: 10px;
+  max-width: 360px;
+  resize: vertical;
+  opacity: 0.5;
+}
+#submitRequest {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  color: whitesmoke;
+  background-color: dodgerblue;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#submitRequest:hover {
+  background-color: rgba(1, 1, 49, 0.3);
+  color: rgba(1, 1, 49, 1);
+  transition: 0.3s ease;
+}
+.quoteForm {
+  color: rgba(245, 245, 245, 0.795);
+  text-align: center;
+}
+/*   job application modal content */
+.careerModalContent {
+  max-width: 400px;
+  margin: 1% auto;
+  padding: 20px;
+  background-color: rgba(245, 245, 245, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 20px whitesmoke;
+  color: rgba(1, 1, 49, 1);
+  font-weight: 600;
+  animation-name: modalOpen;
+  animation-duration: 1s;
+}
+
+.careerForm {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 10%;
+  text-align: left;
+}
+#address {
+  width: 100%;
+}
+#city,
+#state {
+  width: 49%;
+}
+#zipcode {
+  width: 30%;
+}
+#resume {
+  margin-bottom: 10px;
+}
+/*   Thank you page   */
+.requestForm {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(1, 1, 49, 0.685),
+      rgba(1, 1, 49, 0.774)
+    ),
+    url(images/earthbanner.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.thankYou {
+  margin-top: 20vh;
+  color: whitesmoke;
+  text-align: center;
+}
+.thankYou p {
+  padding-bottom: 30px;
+}
